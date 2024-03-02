@@ -22,14 +22,16 @@ const LaunchesView = () => {
   }, []);
   return (
     <>
-      <h1>LaunchesView</h1>
-      {loading ? (
-        <Loading />
-      ) : error ? (
-        <Error />
-      ) : (
-        <LaunchesList launches={launches} />
-      )}
+      <div className="flex flex-col justify-center items-center">
+        <h1>LaunchesView</h1>
+        {loading ? (
+          <Loading />
+        ) : error ? (
+          <Error />
+        ) : (
+          <LaunchesList launches={launches} />
+        )}
+      </div>
     </>
   );
 };
